@@ -31,6 +31,29 @@ while (TRUE)
     // Write an action using echo(). DON'T FORGET THE TRAILING \n
     // To debug (equivalent to var_dump): error_log(var_export($var, true));
 
-    echo("0 3\n"); // 2 integers: rotate power. rotate is the desired rotation angle (should be 0 for level 1), power is the desired thrust power (0 to 4).
+    //echo("0 3\n"); 2 integers: rotate power. rotate is the desired rotation angle (should be 0 for level 1), power is the desired thrust power (0 to 4).
+
+//Ставим предельную высоту или высоты, чтобы сохранить топливо
+    $limitHeight1 = 2200;
+    $limitHeight2 = 1700;
+
+    if ($Y >= $limitHeight1) {
+      echo("0 1\n");
+    }
+    elseif ($Y >= $limitHeight2) {
+      echo("0 3\n");
+    }
+//Увеличеваем ускорение выше 3.7
+    elseif ($Y < $limitHeight2) {
+      echo("0 4\n");
+    }
+
+
+
+
+
+
+
+
 }
 ?>
