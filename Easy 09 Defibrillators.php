@@ -27,10 +27,12 @@ fscanf(STDIN, "%s",
 );
 //Превращаем градусы в радианы
 $LON = FloatRadStyle($LON);
+
 fscanf(STDIN, "%s",
     $LAT
 );
-$LON = FloatRadStyle($LAT);
+$LAT = FloatRadStyle($LAT);
+
 fscanf(STDIN, "%d",
     $N
 );
@@ -64,10 +66,7 @@ for ($i = 0; $i < $N; $i++)
     $minDist = $dist;
     $choice = $i;
   }
-    $errstr .= $dist." ";
 }
-
-error_log(var_export(Distance(3, 1, 3, 23), true));
 
 //Вывод ответа
 echo $defibrillators[$choice][0];
