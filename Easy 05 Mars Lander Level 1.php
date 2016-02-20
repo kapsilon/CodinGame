@@ -44,7 +44,7 @@ while (TRUE)
       echo("0 3\n");
     }
 //Увеличеваем ускорение выше 3.7
-    elseif ($Y < $limitHeight2) {
+    elseif($Y < $limitHeight2) {
       echo("0 4\n");
     }
 
